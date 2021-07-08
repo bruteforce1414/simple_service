@@ -20,3 +20,6 @@ deploy:
   script: bash .docker_push
   on:
     branch: master
+after_success:
+  # Generate coverage report in xml format
+  - coverage xml
